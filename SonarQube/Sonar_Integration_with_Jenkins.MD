@@ -52,7 +52,7 @@ Create a job to test SonarQube. Provide below sonar properties details in the jo
      - sonar.projectVersion=`1.0`
      - sonar.sources=`/var/lib/jenkins/workspace/$JOB_NAME/<PROJECT_NAME>/src`
 
-Execute job to get analysis report. 
+Execute job to get analysis report the. 
 
 ### Next Step
 - [x] [Nexus Installation](https://www.youtube.com/watch?v=83AGz9huJGo)
