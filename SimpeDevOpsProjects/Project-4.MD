@@ -117,7 +117,7 @@ Lets modify jenkins job which was created in *Part-01* as below.
 
 1. Create Jenkins job 
    - *Source Code Management:*
-      - Repository : `https://github.com/ValaxyTech/hello-world.git`
+      - Repository : `https://github.com/shikshan720/hello-world.git`
       - Branches to build : `*/master`  
    - *Build:*
      - Root POM:`pom.xml`
@@ -135,11 +135,11 @@ Lets modify jenkins job which was created in *Part-01* as below.
      - Remote directory	: `//opt//docker`
       	- `cd /opt/docker`
         - `docker build -t $JOB_NAME:v1.$BUILD_ID .`
-        - `docker tag $JOB_NAME:v1.$BUILD_ID valaxy/$JOB_NAME:v1.$BUILD_ID`
-        - `docker tag $JOB_NAME:v1.$BUILD_ID valaxy/$JOB_NAME:latest`
-        - `docker push valaxy/$JOB_NAME:v1.$BUILD_ID`
-        - `docker push valaxy/$JOB_NAME:latest`
-        - `docker rmi $JOB_NAME:v1.$BUILD_ID valaxy/$JOB_NAME:v1.$BUILD_ID` 
+        - `docker tag $JOB_NAME:v1.$BUILD_ID shikshan720/$JOB_NAME:v1.$BUILD_ID`
+        - `docker tag $JOB_NAME:v1.$BUILD_ID shikshan720/$JOB_NAME:latest`
+        - `docker push shikshan720/$JOB_NAME:v1.$BUILD_ID`
+        - `docker push shikshan720/$JOB_NAME:latest`
+        - `docker rmi $JOB_NAME:v1.$BUILD_ID shikshan720/$JOB_NAME:v1.$BUILD_ID` 
         - `valaxy/$JOB_NAME:latest`
 ##### References
 [1] - [Jenkins Docs - Building Software Projects](https://wiki.jenkins.io/display/JENKINS/Building+a+software+project)
