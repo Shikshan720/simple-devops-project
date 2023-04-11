@@ -26,7 +26,7 @@ mkdir /opt/docker
 From tomcat:8-jre8 
 
 # Maintainer
-MAINTAINER "valaxytech@gmail.com" 
+MAINTAINER "shikshanngowda@gmail.com" 
 
 # copy war file on to container 
 COPY ./webapp.war /usr/local/tomcat/webapps
@@ -38,7 +38,7 @@ Manage Jenkins --> Configure system -->  Publish over SSH --> add Docker server 
 6. Create Jenkins job 
 
 A) Source Code Management  
- Repository : https://github.com/ValaxyTech/hello-world.git  
+ Repository : https://github.com/shikshan720/hello-world.git  
  Branches to build : */master  
 
 B) Build
@@ -50,11 +50,11 @@ C) send files or execute commands over SSH
  Source files	: webapp/target/*.war  
  Remove prefix	: webapp/target  
  Remote directory	: //opt//docker  
- Exec command	: docker stop valaxy_demo; docker rm -f valaxy_demo; docker image rm -f valaxy_demo; cd /opt/docker; docker build -t valaxy_demo .  
+ Exec command	: docker stop shikshan_demo; docker rm -f shikshan_demo; docker image rm -f shikshan_demo; cd /opt/docker; docker build -t shikshan_demo .  
 
 D) send files or execute commands over SSH  
   Name: docker_host  
-  Exec command	: docker run -d --name valaxy_demo -p 8090:8080 valaxy_demo  
+  Exec command	: docker run -d --name shikshan_demo -p 8090:8080 shikshan_demo  
 
 7. Login to Docker host and check images and containers. (no images and containers)
 
