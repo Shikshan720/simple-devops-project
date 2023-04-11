@@ -13,7 +13,7 @@ Download and setup nexus stable version
 cd /opt
 wget https://sonatype-download.global.ssl.fastly.net/nexus/3/nexus-3.0.2-02-unix.tar.gz
 tar -zxvf  nexus-3.0.2-02-unix.tar.gz
-mv /opt/nexus-3.0.2-02 /opt/nexus
+mv /opt/nexus-3.0.2-02 /opt/nexuss
 ```
 
 As a good security practice, it is not advised to run nexus service as root. so create new user called nexus and grant sudo access to manage nexus services 
