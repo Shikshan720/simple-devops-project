@@ -9,16 +9,16 @@ In this project, we will be see how to *use Git, Jenkins, Ansible, DockerHub, Do
 ![](https://github.com/ValaxyTech/DevOpsDemos/blob/master/SimpeDevOpsProjects/images/Project-4.png)
 
 #### PreRequisites
-1. Jenkins - Get help [here](https://www.youtube.com/watch?v=M32O4Yv0ANc)
-1. Ansible - Get help [here](https://www.youtube.com/watch?v=79xFyOc_eEY)
-1. Setup ansible client and install docker. [here](https://www.youtube.com/watch?v=nMLQgXf8tZ0)
+1. Jenkins
+1. Ansible 
+1. Setup ansible client and install docker. 
 1. Docker Hub account 
 
 #### Previous DevOps projects:
 
-1. Simple DevOps project-1 [here](https://www.youtube.com/watch?v=Z9G5stlXoyg)
-1. Simple DevOps project-2 [here](https://www.youtube.com/watch?v=nE4b9mW2ym0)
-1. Simple DevOps project-3 [here](https://www.youtube.com/watch?v=nMLQgXf8tZ0)
+1. Simple DevOps project-1
+1. Simple DevOps project-2 
+1. Simple DevOps project-3 
 
 In *part-01* we create Docker image on ansible server through Jenkins job and pushed it onto DockerHub. 
 
@@ -27,7 +27,7 @@ In *part-01* we create Docker image on ansible server through Jenkins job and pu
 1. Login to Jenkins console
 1. Create *Jenkins job*, Fill the following details,
    - *Source Code Management:*
-      - Repository : `https://github.com/ValaxyTech/hello-world.git`
+      - Repository : `https://github.com/shikshan720/hello-world.git`
       - Branches to build : `*/master`  
    - *Build:*
      - Root POM:`pom.xml`
@@ -47,8 +47,8 @@ In *part-01* we create Docker image on ansible server through Jenkins job and pu
 	      - `cd /opt/docker`
           - `docker build -t valaxy_demo .`
 	      - `docker tag valaxy_demo valaxy/valaxy_demo`
-          - `docker push valaxy/valaxy_demo`
-          - `docker rmi valaxy_demo valaxy/valaxy_demo`
+          - `docker push shikshan/shikshan_demo`
+          - `docker rmi shikshan_demo shikshan/shikshan_demo`
               
 1. Login to Docker host and check images and containers. (no images and containers)
 
@@ -74,14 +74,14 @@ In *Part-02* we create *create_docker_container.yml* playbook. this get intiated
        become: true
        tasks:
         - name: stop previous version docker
-          shell: docker stop valaxy_demo
+          shell: docker stop shikshan_demo
         - name: remove stopped container
-          shell: docker rm -f valaxy_demo	  
+          shell: docker rm -f shikshan_demo	  
         - name: remove docker images
-          shell: docker image rm -f valaxy/valaxy_demo
+          shell: docker image rm -f shsikshan/shikshan_demo
           
         - name: create docker image
-          shell: docker run -d --name valaxy_demo -p 8090:8080 valaxy/valaxy_demo
+          shell: docker run -d --name shikshan_demo -p 8090:8080 shikshan/shikshan_demo
 
 1. Add this script to Jenkins job.
    - Chose *"configure"* to modify your jenkins job. 
