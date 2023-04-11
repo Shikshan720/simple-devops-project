@@ -45,8 +45,8 @@ In *part-01* we create Docker image on ansible server through Jenkins job and pu
        - Remote directory	: `//opt//docker`
        - Exec Command: 
 	      - `cd /opt/docker`
-          - `docker build -t valaxy_demo .`
-	      - `docker tag valaxy_demo valaxy/valaxy_demo`
+          - `docker build -t shikshan_demo .`
+	      - `docker tag shikshan_demo shikshan/shikshan_demo`
           - `docker push shikshan/shikshan_demo`
           - `docker rmi shikshan_demo shikshan/shikshan_demo`
               
